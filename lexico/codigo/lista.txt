@@ -1,0 +1,5 @@
+Palabras reservadas
+ define starting returning finishing int real string main whether elif else when since do print input fact power abs minimal maximal range or and not
+
+Simbolos
+ { {{ } }} ( (( :=: :: <:< <:= >:> >:= , [ ] ; = =:= + - * ! ! =:= || && ) (( "

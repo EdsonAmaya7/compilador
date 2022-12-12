@@ -1,0 +1,107 @@
+Aplicar método sintáctico: Ascendente
+P→ {VARIABLES} {LISTAS} {DICCIONARIO} FUNCION MAIN
+FUNCION→ TIPO define identificador(PARAM) starting CUERPO returning LISTARETURN finishing FUNCION
+FUNCION → ε
+VARIABLES → (identificador,TIPO):=: VALOR VARIABLESP
+VARIABLESP→ VARIABLES
+VARIABLESP→ ε
+TIPO→ int
+TIPO →real
+TIPO→ string
+MAIN → main() starting CUERPO finishing
+LISTAS→identificador :=: LISTA_VALOR LISTAS
+LISTA_VALOR → [ SUBLISTA ]
+LISTAS → ε
+VALOR → número
+VALOR → texto
+SUBLISTA→número SUBLISTAPRIMA
+SUBLISTA →texto SUBLISTAPRIMA
+SUBLISTA →identificador SUBLISTAPRIMA
+SUBLISTA →[ SUBLISTA ]
+SUBLISTA→ ε
+SUBLISTAPRIMA → ε
+PARAM → identificador LISTAPARAMETROS
+PARAM → ε
+LISTAPARAMETROS → ; PARAMETROS
+LISTAPARAMETROS → ε
+DICCIONARIO → {{ CLAVES_VALORES }}
+DICCIONARIO → ε
+CLAVES_VALORES → texto :: numero CLAVES_VALORES_PRIMA
+CLAVES_VALORES_PRIMA → ; CLAVES_VALORES
+CLAVES_VALORES_PRIMA → ε
+CUERPO → whether EXPBOOL starting CUERPO finishing ELSE_IF
+ELSE_IF → elif EXPBOOL starting CUERPO finishing ELSE_IF_PRIMA
+ELSE_IF → ε
+ELSE_IF_PRIMA → ELSE_IF
+ELSE_IF_PRIMA → else:: starting CUERPO finishing
+ELSE_IF_PRIMA → ε
+CUERPO → when EXPBOOL starting CUERPO finishing
+CUERPO → since identificador into RANGE starting CUERPO finishing
+CUERPO → do starting CUERPO finishing when EXPBOOL
+CUERPO → print(( IMPRESION)CUERPO → input(())
+CUERPO → VARIABLES
+CUERPO → identificador = ASIGNACION
+ASIGNACION → fact ((identificador))
+ASIGNACION → power((identifcador,identificador))
+ASIGNACION → abs((identificador))
+ASIGNACION → minimal((PARAMETROS ))
+ASIGNACION → maximal((PARAMETROS ))
+ASIGNACION → EXPARITM
+IMPRESION→ identificador IMPRESIONPRIMA
+IMPRESIÓN→numero IMPRESIONPRIMA
+IMPRESIONPRIMA→, IMPRESIÓN
+IMPRESIONPRIMA→ ε
+RANGE → range (( RANGOFOR ))
+RANGOFOR → identificador RANGOFOR_A
+RANGOFOR_A→; identificador RANGOFOR_B
+RANGOFOR_A→ ε
+RANGOFOR_B → ; identificador
+RANGOFOR_B → ε
+LISTARETURN → identificador LISTARETURNPRIMA
+LISTARETURN → número LISTARETURNPRIMA
+LISTARETURN → texto LISTARETURNPRIMA
+LISTARETURNPRIMA → , LISTARETURN
+LISTARETURNPRIMA → ε
+BOOLEXP → BOOLTERM BOOLEXPP
+BOOLEXPP → OR BOOLTERM BOOLEXPP
+BOOLEXPP → ε
+BOOLTERM → BOOLFACTOR BOOLTERMP
+BOOLTERMP →AND BOOLFACTOR BOOLTERMP
+BOOLTERMP → ε
+BOOLFACTOR → NOT BOOLFACTOR
+BOOLFACTOR → ( RELTERM RELTERMP)
+BOOLFACTOR → RELTERM RELTERMP
+RELTERMP→ OPERADOR RELTERM
+RELTERMP→ ε
+RELTERM → EXPARITM
+EXPARITM → TERMINO EXPPRIMA
+EXPPRIMA → + TERMINO EXPPRIMA
+EXPPRIMA → - TERMINO EXPPRIMA
+EXPPRIMA → ε
+TERMINO → FACTOR TERMPRIMO
+TERMPRIMO → * FACTOR TERMPRIMO
+TERMPRIMO → / FACTOR TERMPRIMO
+TERMPRIMO → // FACTOR TERMPRIMOTERMPRIMO → ε
+FACTOR → identificador
+FACTOR → número
+OPERADOR → <:<
+OPERADOR → >:>
+OPERADOR → <:=
+OPERADOR → >:=
+OPERADOR → =:=
+OPERADOR → !=:=
+OR → or
+OR → ||
+AND → and
+AND → &&
+NOT → not
+NOT → !
+Expresión Regular Número:
+&𝑑𝑖𝑔𝑖𝑡𝑜 +
+&𝑑𝑖𝑔𝑖𝑡𝑜 + 𝑒𝑑𝑖𝑔𝑖𝑡𝑜 +
+&𝑑𝑖𝑔𝑖𝑡𝑜 + . 𝑑𝑖𝑔𝑖𝑡𝑜 +
+&𝑑𝑖𝑔𝑖𝑡𝑜 + . 𝑑𝑖𝑔𝑖𝑡𝑜 + 𝑒𝑑𝑖𝑔𝑖𝑡𝑜 +
+Expresión Regular Identificadores: 𝑙𝑒𝑡𝑟𝑎(𝑙𝑒𝑡𝑟𝑎|𝑑𝑖𝑔𝑖𝑡𝑜) ∗
+Expresión Regular Comentarios: //(𝑙𝑒𝑡𝑟𝑎|𝑒𝑠𝑝𝑎𝑐𝑖𝑜|𝑑𝑖𝑔𝑖𝑡𝑜) ∗ //
+/*(𝑙𝑒𝑡𝑟𝑎|𝑒𝑠𝑝𝑎𝑐𝑖𝑜|𝑑𝑖𝑔𝑖𝑡𝑜) ∗
+Expresión Regular Textos: ′(𝑙𝑒𝑡𝑟𝑎|𝑑𝑖𝑔𝑖𝑡𝑜|𝑒𝑠𝑝𝑎𝑐𝑖𝑜| ) ∗ ′

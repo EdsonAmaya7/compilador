@@ -1,0 +1,44 @@
+ Follow(P) = { ENF $ (0) }
+ Follow(FUNCION) = { main() (9),  ENF $ }
+ Follow(VARIABLES) = { }(0)  }
+ Follow(VARIABLESP) = { }(0)  }
+ Follow(TIPO) = { define(1) )(3) }
+ Follow(MAIN) = {ENF $ (0)}
+ Follow(LISTAS) = { }(0) }
+ Follow(LISTA_VALOR) = { identificador (10) }(0) }
+ Follow(Valor) = { '(' (4), }(0) }
+ Follow(SUBLISTA) = { ](18)}
+ Follow(SUBLISTAPRIMA) = { ](18) }
+ Follow(PARAM) = { )(1) }
+ Follow(LISTAPARAMETROS) = { )(1) }
+ Follow(DICCIONARIO) = { }(0) }
+ Follow(CLAVES_VALORES) = { }}(25) }
+ Follow(CLAVES_VALORES_PRIMA) = { }}(25) }
+ Follow(CUERPO) = { returning(1) finishing(9)  }
+ Follow(ELSE_IF) = { returning(1) finishing(9)  }
+ Follow(ELSE_IF_PRIMA ) = {returning(1) finishing(9)  }
+ Follow(ASIGNACION) ={returning(1) finishing(9)  }
+ Follow(IMPRESION) =   { ))(39) }
+ Follow(IMPRESIONPRIMA) =  { ))(39) }
+ Follow(RANGE) =  {starting(37) (( (52) }
+ Follow(RANGOFOR) =  { )) (52) }
+ Follow(RANGOFOR_A) =  { )) (52)  }
+ Follow(RANGOFOR_B) =  { )) (52)  }
+ Follow(LISTARETURN) =  { finishing(1) }
+ Follow(LISTARETURNPRIMA) =  { finishing(1) }
+ Follow(BOOLEXP) =  {or(64), ||(64)}
+ Follow(BOOLEXPP) =  { or(64), ||(64)}
+ Follow(BOOLTERM) =  {or(64), ||(64)}
+ Follow(BOOLTERMP) =  {or(64), ||(64)}
+ Follow(BOOLFACTOR) =  { or(64), ||(64)}
+ Follow(RELTERMP) =  { )(79) or(64), ||(64)}
+ Follow(RELTERM) =   { <:<(85)  >:>(86)  <:=(87)  >:=(87)   =:=(88)  !=:=(89)  e(73)  )(70)   or(64)  ||(64) }
+ Follow(EXPARITM) =  { <:<(85)  >:>(86)  <:=(87)  >:=(87)   =:=(88)  !=:=(89)  e(73)  )(70)   or(64)  ||(64) }
+ Follow(EXPPRIMA) =  { <:<(85)  >:>(86)  <:=(87)  >:=(87)   =:=(88)  !=:=(89)  e(73)  )(70)   or(64)  ||(64) }
+ Follow(TERMINO) =  {<:<(85)  >:>(86)  <:=(87)  >:=(87)   =:=(88)  !=:=(89)  e(73)  )(70)   or(64)  ||(64) }
+ //Follow(TERMINOPRIMO) =  { + - e }
+ Follow(FACTOR) =  {*(80),/(81),//(82)}
+ Follow(OPERADOR) =  { identificador(74),numero(74) <:<(85)  >:>(86)  <:=(87)  >:=(87)   =:=(88)  !=:=(89)  e(73)  )(70)   or(64)  ||(64) }
+ Follow(OR) =   {  not(66),( (66),identificador(66),numero(66)
+ Follow(AND) =  { not(66),( (66),identificador(66),numero(66)
+ Follow(NOT) =  { not(66),( (66),identificador(66),numero(66)
